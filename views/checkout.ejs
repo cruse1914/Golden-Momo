@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+<section class="first" id="home">
+     <div class="second">
+       <img class="parallax" src="image/(1).jpg" alt="">
+</div>
+       <div class="second-text second-text1">
+        <div class="toplogo">
+        <img style="width:6%;position:absolute;margin-left:47%;margin-top:-1%;" src="image/oo.png" alt="">
+        </div><br><br><br>
+    <div class="about-us">
+      <h2>Payment</h2>
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br />incididunt ut labore et dolore magna aliqua. </h4>
+    </div>
+    </div>
+</section>
+<section class="adcard" style="margin-bottom:-32%;">
+<div class="card" style="text-align:center;margin-left:36%;margin-top:10%;margin-bottom:38%;width:30%;">
+	<h3 style="margin-bottom:5%;"><b>Welcome to Payment Gateway</b></h3>
+	<form style="margin-bottom:5%;" action="/payment" method="POST">
+	<script
+		src="//checkout.stripe.com/v2/checkout.js"
+		class="stripe-button"
+		data-key="<%= key %>"
+		data-amount="<%= totalPrice %>00"
+		data-currency="inr"
+		data-name="<%= name %>"
+		data-description="Sells Only Best Quality Special Momo"
+		data-locale="auto" >
+		</script>
+	</form>
+</div>
+</section>

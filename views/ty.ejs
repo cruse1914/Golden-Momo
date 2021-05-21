@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+<section class="first" id="home">
+    <div class="second">
+      <img class="parallax" src="image/(1).jpg" alt="">
+</div>
+      <div class="second-text">
+
+        <!-- Nav Bar -->
+     <div class="toplogo">
+       <img style="width:6%;position:absolute;margin-left:47%;margin-top:-1%;" src="image/oo.png" alt="">
+     </div>
+           <nav class="navbar navbar-expand-lg navbar-dark">
+
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+
+             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+               <ul class="navbar-nav">
+                 <li class="nav-item">
+                   <a class="nav-link" style="color:white;" href="/main1">HOME</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" style="color:white;" href="/menu1">MENU</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" style="color:white;" href="/order1">ORDER</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" style="color:white;" href=""><img class=""style="" src="" alt=""></a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" style="color:white;" href=""><img class=""style="" src="" alt=""></a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link1" style="color:white;" href="/catering1">CATERING</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link2" style="color:white;" href="/about1">ABOUT</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link3" style="color:white;" href="/location1">LOCATION</a>
+                 </li>
+               </ul>
+
+             </div>
+           </nav>
+   <div class="about-us">
+     <h2>Order</h2>
+     <h4>Some text about who am I and what I do.</h4>
+   </div>
+   </div>
+</section>
+<section class="adcard">
+  <div class="card" style="margin-left:32%;margin-top:10%;margin-bottom:26%;width:40%;">
+  	<h3 style="text-align:center;">Thanks For Ordering Shoe <br /> From Us.</h3>
+      <% products.forEach(function(data){ %>
+        <h4 style="margin-left:20%;margin-top:3%;">Order Number :<%= data.item.id %></h4>
+          <% }) %><br>
+    <a href="/order1" class="btn addtc" style="background-color: #a50022;color:white;">Continue Ordering</a>
+    </div>
+</section>
+<%- include('partials/footer1') %>

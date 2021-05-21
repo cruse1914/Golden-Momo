@@ -1,0 +1,93 @@
+ <%- include('partials/header') %>
+<section class="first" id="home">
+     <div class="second">
+       <img class="parallax" src="image/(1).jpg" alt="">
+</div>
+       <div class="second-text">
+         <!-- Nav Bar -->
+        <div class="toplogo">
+        <img style="width:6%;position:absolute;margin-left:47%;margin-top:-1%;" src="image/oo.png" alt="">
+        </div>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" style="color:white;" href="/">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style="color:white;" href="/menu">MENU</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style="color:white;" href="/order">ORDER</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style="color:white;" href=""><img class=""style="" src="" alt=""></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style="color:white;" href=""><img class=""style="" src="" alt=""></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link1" style="color:white;" href="/catering">CATERING</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link2" style="color:white;" href="/about">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link3" style="color:white;" href="/location">LOCATION</a>
+                  </li>
+                </ul>
+
+              </div>
+            </nav>
+    <div class="about-us">
+      <h2>Cart</h2>
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br />incididunt ut labore et dolore magna aliqua. </h4>
+    </div>
+    </div>
+</section>
+<section id="cart">
+      <h1 style="color:#a50022;"><b>Your cart</b></h1>
+<% if(products) {%>
+    <div class="cart page">
+        <ul class="list-group">
+            <% products.forEach(function(data){ %>
+            <li class="list-group-item clearfix" style="background-color:#a50022;">
+                <div class="caimg">
+                  <img style="width:10%;margin-right:80%;" src="image/<%= data.item.image %>" alt="">
+                </div>
+                <div class="col-xs-5 cah4">
+                    <h4 style="margin-top:-5%; margin-right:40%;color:white;"><b><%= data.item.name %></b></h4><br/>
+                </div>
+                <div class="col-xs-2 text-right" style="margin-top:-20%;">
+                    <span class="badge"><%= data.quantity %> </span>
+                </div>
+                <div class="col-xs-3 text-right">
+                  Rs <%= data.price %>
+                </div>
+                <div class="col-xs-2 text-right">
+                    <a href="/remove/<%= data.item.id %>" class="btn btn-primary">Remove</a>
+                </div>
+            </li>
+            <% }) %>
+        </ul>
+    </div>
+    <div class="cato" style="margin-top:3%;margin-left:90%;">
+        <strong>Total: Rs <%= totalPrice %> </strong>
+    </div>
+    <hr><br><br>
+    <div class="text" style="margin-left:90%;">
+        <a href="/address1" type="button" class="btn btn-success">Continue</a>
+    </div><br><br>
+
+<% } else {%>
+  <p>Your cart is currently empty.</p>
+  <a style="color:black" href="/order1"><h4>CONTINUE ORDERING --></h4></a>
+<% } %>
+</section>
+<%- include('partials/footer') %>

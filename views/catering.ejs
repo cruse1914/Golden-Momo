@@ -1,0 +1,98 @@
+<%- include('partials/header') %>
+
+  <section class="first" id="home">
+      <div class="second">
+        <img class="parallax" src="image/(1).jpg" alt="">
+        <div class="second-text">
+          <!-- Nav Bar -->
+       <div class="toplogo">
+         <img style="width:6%;position:absolute;margin-left:47%;margin-top:-1%;" src="image/oo.png" alt="">
+       </div>
+             <nav class="navbar navbar-expand-lg navbar-dark">
+
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+
+               <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                 <ul class="navbar-nav">
+                   <li class="nav-item">
+                     <a class="nav-link" style="color:white;" href="/">HOME</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" style="color:white;" href="/menu">MENU</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" style="color:white;" href="/order">ORDER</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" style="color:white;" href=""><img class=""style="" src="" alt=""></a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" style="color:white;" href=""><img class=""style="" src="" alt=""></a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link1" style="color:white;" href="/catering">CATERING</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link2" style="color:white;" href="/about">ABOUT</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link3" style="color:white;" href="/location">LOCATION</a>
+                   </li>
+                 </ul>
+
+               </div>
+             </nav>
+     <div class="about-us">
+       <h2>Catering</h2>
+       <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br />incididunt ut labore et dolore magna aliqua. </h4>
+     </div>
+     </div>
+   </div>
+ </section>
+   <section id="ab-about1">
+     <div class="service-box">
+       <h3><B>OUR<br>SERVICES</B></h3>
+       <br>
+       <p style="text-align:center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+         sed do eiusmod tempor incididunt ut labore et dolore
+         magna aliqua. Ut enim ad minim veniam, quis nostrud
+         exercitation ullamco laboris nisi ut aliquip ex ea
+         commodo consequat.</p>
+     </div><br>
+     <div class="menu-box-photo">
+        <img src="image/download.jpg" alt="">
+     </div>
+     <div class="menu-box">
+       <h3><B>CATERING<br>MENU</B></h3><br>
+       <p style="text-align:center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+         sed do eiusmod tempor incididunt ut labore et dolore<br />magna aliqua. </p><br><br>
+         <button class="btn btn-outline-light btn-lg download-button" type="button">See Catering Menu</button>
+     </div>
+     <div class="catering-inq">
+       <div class="cat">
+       <p>For Catering Inquiries, contact Dipayan Mukherjee<br>(718) 555-1234</p>
+     </div>
+     <h2 style="margin-left:36%; color:white;"><%= msg %></h2>
+     <form action="/send" method="POST">
+       <div class="name">
+       <p>Name</p>
+         <input class="btn btn-outline-light" style="margin-top:-2%;" type="text" name="name" placeholder="Name"  required>
+         <p style="margin-top:2%;">Email</p>
+           <input class="btn btn-outline-light" style="margin-top:-2%;" type="email" name="email" placeholder="Email"  required>
+           <p style="margin-top:2%;">Phone</p>
+             <input class="btn btn-outline-light" style="margin-top:-2%;"type="text" name="number" placeholder="Number"  required>
+</div>
+             <div class="message">
+             <p style="margin-top:.5%;">Message</p>
+              <textarea class="btn btn-outline-light" style="margin-top:-2%;" name="message" placeholder="Message" rows="8" cols="30"  required></textarea>
+     </div>
+     <div class="btbt" style="width:20%; margin-left:75.7%;margin-top:3%;">
+     <button class="btn btn-block btn-dark addtc" type="submit">SUBMIT</button><br>
+   </div>
+ </form>
+ </div>
+   </section>
+<%- include('partials/footer') %>

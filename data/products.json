@@ -1,0 +1,68 @@
+[
+  {
+  "id": 1,
+  "name": "KOTHEY MOMO",
+  "image": "m1.jpg",
+  "price": 90
+},
+{
+  "id": 2,
+  "name": "STEAMED MOMO",
+  "image": "m2.jpg",
+  "price": 90
+},
+{
+  "id": 3,
+  "name": "JHOL MOMO",
+  "image": "m3.png",
+  "price": 90
+},
+{
+  "id": 4,
+  "name": "SANDHEKO MOMO",
+  "image": "m4.jpg",
+  "price": 90
+},
+{
+  "id": 5,
+  "name": "CHOILA MOMO",
+  "image": "m5.png",
+  "price": 90
+},
+{
+  "id": 6,
+  "name": "VEGAN MOMO",
+  "image": "m6.jpg",
+  "price": 90
+},
+{
+  "id": 7,
+  "name": "GLUTEN FREE MOMO",
+  "image": "m7.jpg",
+  "price": 90
+},
+{
+  "id": 8,
+  "name": "WHOLE WHEAT MOMO",
+  "image": "m8.jpg",
+  "price": 90
+},
+{
+  "id": 9,
+  "name": "THUKPA MOMO",
+  "image": "m9.jpg",
+  "price": 90
+},
+{
+  "id": 10,
+  "name": "MALAYSIAN LAKSA MOMO",
+  "image": "m10.jpg",
+  "price": 90
+},
+{
+  "id": 11,
+  "name": "DESSERT",
+  "image": "m11.png",
+  "price": 90
+}
+]

@@ -1,0 +1,110 @@
+<%- include('partials/header') %>
+  <section class="first" id="home">
+       <div class="second">
+         <img class="parallax" src="image/(1).jpg" alt="">
+
+         <a style="margin-top:-105%;margin-left:79%;" class="btn btn-warning" href="/cart"><i class="fa fa-shopping-cart"></i>
+           <% if(session.cart ){ %>
+             <span class="badge badge-light"> <%= session.cart.totalItems %> </span>
+             <% } %></a>
+
+         <div class="login">
+                 <a class="btn btn-outline-light" style="margin-left:-30%;" href="logout">Logout</a>
+                  <a class="btn btn-outline-light" href="myorder">My Order</a></div>
+
+         <div class="second-text">
+
+           <!-- Nav Bar -->
+        <div class="toplogo">
+          <img style="width:6%;position:absolute;margin-left:47%;margin-top:-1%;" src="image/oo.png" alt="">
+        </div>
+              <nav class="navbar navbar-expand-lg navbar-dark">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" style="color:white;" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color:white;" href="/menu">MENU</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color:white;" href="/order">ORDER</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color:white;" href=""><img class=""style="" src="" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color:white;" href=""><img class=""style="" src="" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link1" style="color:white;" href="/catering">CATERING</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link2" style="color:white;" href="/about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link3" style="color:white;" href="/location">LOCATION</a>
+                    </li>
+                  </ul>
+
+                </div>
+              </nav>
+      <div class="about-us">
+        <h2>Order</h2>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br />incididunt ut labore et dolore magna aliqua. </h4>
+      </div>
+      </div>
+    </div>
+  </section>
+    <section id="ab-about">
+
+ <div class="offers-order">
+   <h4 id="offer-head"style="margin-left:4%; color:white;">MOMOS</h4>
+ </div><br>
+ <div class="row">
+  <% products.forEach(function(data) { %>
+     <div class="order-offer">
+       <img class="meimg" style="width:100%;" src="image/<%= data.image %>" alt="">
+       <h5><B><%= data.name %></B></h5>
+       <div class="row" style="margin-left:3%;margin-top:5%;padding-bottom:5%;">
+        <h5 style="margin-left:5%;"><b>Rs</b> <%= data.price %> (8 pieces)</h5>
+      <div class="text-component text-center adadbt">
+        <p class="flex flex-wrap flex-center flex-gap-xxs">
+   <a href="/add/<%= data.id %>" class="btn btn-outline-light addtc" style="color: white; background-color:#a50022; width:100%; margin-left:80%;" role="button"> ADD</a>
+    </p>
+    </div>
+    </div>
+     </div>
+   <% }) %>
+ </div>
+    </section>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<%- include('partials/footer') %>

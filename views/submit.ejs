@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+<section class="first" id="home">
+    <div class="second">
+      <img class="parallax" src="image/(1).jpg" alt="">
+</div>
+      <div class="second-text second-text1">
+       <div class="toplogo">
+       <img style="width:6%;position:absolute;margin-left:47%;margin-top:-1%;" src="image/oo.png" alt="">
+       </div><br><br><br>
+   <div class="about-us">
+     <h2>Order</h2>
+     <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br />incididunt ut labore et dolore magna aliqua. </h4>
+   </div>
+   </div>
+</section>
+<section class="adcard" style="margin-bottom:-20%;">
+  <div class="card" style="margin-left:32%;margin-top:10%;margin-bottom:6%;width:40%;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+  	<h3 style="text-align:center;margin-bottom:5%;"><b>Billing Address</b></h3>
+
+    <form action="/submit" method="POST">
+  <div class="form-group">
+    <label style="margin-left:2%;" for="line1"><b>Address :</b></label>
+    <input class="form-control btn btn-outline-dark" type="text" name="line1" style="width:60%;margin-left:5%;" required><br />
+    </div>
+    <div class="form-group">
+    <label style="margin-left:2%;" for="city"><b>City :</b></label>
+<input class="form-control btn btn-outline-dark" type="text" name="city" style="width:60%;margin-left:12%;" required><br />
+</div>
+<div class="form-group">
+<label style="margin-left:2%;" for="state"><b>State :</b></label>
+<input class="form-control btn btn-outline-dark" type="text" name="state" style="width:60%;margin-left:10%;" required><br />
+</div>
+<div class="form-group">
+<label style="margin-left:2%;" for="postal_code"><b>Postal Code :</b></label>
+<input class="form-control btn btn-outline-dark" type="text" name="postal_code" style="width:60%;" required><br />
+</div>
+<div class="form-group">
+<label style="margin-left:2%;" for="ph_num"><b>Phone No :</b></label>
+<input class="form-control btn btn-outline-dark" type="text" name="ph_num" style="width:60%;margin-left:3%;" required><br />
+</div>
+  <button style="margin-left:40%;margin-bottom:5%;margin-top:5%;" type="submit" class="btn btn-dark">Submit</button>
+</form>
+
+</div>
+</section>

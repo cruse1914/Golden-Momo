@@ -1,0 +1,140 @@
+<%- include('partials/header') %>
+<section class="first" id="home">
+    <div class="second">
+      <img class="parallax" src="image/(1).jpg" alt="">
+</div>
+      <div class="second-text">
+        <!-- Nav Bar -->
+       <div class="toplogo">
+       <img style="width:6%;position:absolute;margin-left:47%;margin-top:-1%;" src="image/oo.png" alt="">
+       </div>
+           <nav class="navbar navbar-expand-lg navbar-dark">
+
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+
+             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+               <ul class="navbar-nav">
+                 <li class="nav-item">
+                   <a class="nav-link" style="color:white;" href="/">HOME</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" style="color:white;" href="/menu">MENU</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" style="color:white;" href="/order">ORDER</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" style="color:white;" href=""><img class=""style="" src="" alt=""></a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" style="color:white;" href=""><img class=""style="" src="" alt=""></a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link1" style="color:white;" href="/catering">CATERING</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link2" style="color:white;" href="/about">ABOUT</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link3" style="color:white;" href="/location">LOCATION</a>
+                 </li>
+               </ul>
+
+             </div>
+           </nav>
+   <div class="about-us">
+     <h2>Order</h2>
+     <h4>Some text about who am I and what I do.</h4>
+   </div>
+   </div>
+</section>
+<section>
+  </section>
+<section class="adcard1" style="margin-top:30%;">
+  <% if(products) {%>
+<div class="card">
+  <h1 style="text-align:center;"><b>My Order</b></h1><br>
+  <div class="row myo">
+    <h3 style="margin-left:10%;">Order ID</h3>
+    <h3 style="margin-left:15%;">Total Price</h3>
+    <h3 style="margin-left:15%;">Date Of Purchase</h3>
+  </div>
+</div>
+      <% products.forEach(function(data){ %>
+  <div class="row myo1" style="margin-top:2%;">
+    <p class="myoid"><%= data.item.id %></p>
+      <% }) %>
+    <p style="margin-left:20%;">Rs <%= totalPrice %></p>
+    <p class="mydate" style="margin-left:20%;"><%= date %></p>
+    <a class="accordion1 btn" style="margin-left:85%;margin-top:-2%;background-color: transparent;">View Detail</a>
+    <div class="panel" style="height:10000px;">
+          <div class="cart page" style="">
+          <div class="row myo" style="margin-top:5%;">
+            <h3 class="myoordn" style="margin-left:17%;">Order Name</h3>
+            <h3 class="myoquan" style="margin-left:22%;">Quantity</h3>
+            <h3 class="myoprice" style="margin-left:12%;">Price</h3></div>
+              <ul class="list-group">
+      <% products.forEach(function(data){ %>
+                  <li class="list-group-item clearfix myo">
+                      <div class="col-xs-1">
+                        <img style="width:10%;margin-left:2%;margin-top:%;" src="image/<%= data.item.image %>" alt="">
+                      </div>
+                      <div class="col-xs-5">
+                          <h4 style="margin-top:-5%; margin-left:15%;color:#a50022;"><b><%= data.item.name %></b> </h4><br/>
+                      </div>
+                      <div class="col-xs-2 myoqua" style="margin-top:-8%;margin-left:60%;color:#a50022;">
+                          <span class="badge"><%= data.quantity %> </span>
+                      </div>
+                      <div class="col-xs-2 myopri" style="margin-top:-3%;margin-left:85%;margin-bottom:3%;color:#a50022;">
+                      <p> Rs <%= data.price %></p>
+                      </div>
+                  </li><br>
+              </ul>
+          </div>
+      <% }) %>
+          <br>
+
+    </div>
+  </div><br>
+  <div class="adcard2" style="position:relative;margin-top:-5%;background-color: transparent;">
+    <h4 style="margin-left:5%;margin-top:5%;"><u>Shipping Details</u></h4><br>
+
+             <label style="margin-left:5%;" for="line1"><b>Address :</b></label>
+            <p style="margin-top:-2.3%;margin-left:14%;" class="secret-text"><%=usersWithSecrets.line1%></p>
+            <label style="margin-left:5%;margin-top:-1%;" for="city"><b>City :</b></label>
+        <p style="margin-top:-2.3%;margin-left:14%;" class="secret-text"><%=usersWithSecrets.city%></p>
+        <label style="margin-left:5%;margin-top:-1%;" for="state"><b>State :</b></label>
+        <p style="margin-top:-2.3%;margin-left:14%;" class="secret-text"><%= usersWithSecrets.state %></p>
+        <label style="margin-left:5%;margin-top:-1%;" for="postal_code"><b>Postal Code :</b></label>
+        <p style="margin-top:-2.3%;margin-left:14%;" class="secret-text"><%=usersWithSecrets.postal_code%></p>
+        <label style="margin-left:5%;margin-top:-1%;" for="ph_num"><b>Phone No :</b></label>
+        <p style="margin-top:-2.3%;margin-left:14%;" class="secret-text"><%= usersWithSecrets.ph_num %></p><br /><br />
+    <br>
+    </div>
+  <% } else {%>
+    <div class="card" style="width:30%;margin-left:35%;text-align:center;margin-top:-30%;">
+    <p>No Order You Have Done Yet.</p>
+    <a style="color:black" href="/order1"><h4>ORDER NOW</h4></a>
+    </div>
+  <% } %>
+</section><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<script>
+var acc = document.getElementsByClassName("accordion1");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active1");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+<%- include('partials/footer') %>

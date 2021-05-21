@@ -1,0 +1,79 @@
+<%- include('partials/header') %>
+
+  <section class="first" id="home">
+      <div class="second">
+        <img class="parallax" src="image/(1).jpg" alt="">
+        <div class="second-text">
+          <!-- Nav Bar -->
+         <div class="toplogo">
+         <img style="width:6%;position:absolute;margin-left:47%;margin-top:-1%;" src="image/oo.png" alt="">
+         </div>
+             <nav class="navbar navbar-expand-lg navbar-dark">
+
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+
+               <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                 <ul class="navbar-nav">
+                   <li class="nav-item">
+                     <a class="nav-link" style="color:white;" href="/">HOME</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" style="color:white;" href="/menu">MENU</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" style="color:white;" href="/order">ORDER</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" style="color:white;" href=""><img class=""style="" src="" alt=""></a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" style="color:white;" href=""><img class=""style="" src="" alt=""></a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link1" style="color:white;" href="/catering">CATERING</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link2" style="color:white;" href="/about">ABOUT</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link3" style="color:white;" href="/location">LOCATION</a>
+                   </li>
+                 </ul>
+
+               </div>
+             </nav>
+     </div>
+   </div>
+ </section>
+  <section id="ab-about" style="margin-bottom:-22%;">
+
+    <form action="/login" method="POST">
+      <div class="logi-card card">
+        <h1 style="text-align:center;margin-top:3%;margin-bottom:3%;"><b>Login</b></h1>
+        <br />
+            <div class="form-group">
+        <label style="margin-left:15%;" for="email">Email</label>
+        <input class="form-control btn btn-outline-dark" style="margin-left:15%; width:70%;" type="email" name="username">
+        </div>
+            <div class="form-group">
+        <label style="margin-left:15%;" for="password">Password</label>
+        <input class="form-control btn btn-outline-dark" style="margin-left:15%;width:70%;" type="password" name="password">
+        </div>
+        <br /><br />
+        <button class="btn btn-danger" style="margin-left:40%;margin-top:-15%;width:20%;" type="submit" name="button">Login</button>
+        <br /><br />
+        <div class="col-sm-8" style="margin-left:18%;margin-top:-8%;">
+                <a class="btn btn-block btn-social btn-google logoo" href="/auth/google" role="button">
+                  <i class="fab fa-google"></i>
+                  Sign In With Google
+                </a>
+              </div><br />
+        <a style="margin-left:35%;" href="register">Create Account</a><br>
+        </div>
+        </form>
+    </section>
+
+<%- include('partials/footer') %>
